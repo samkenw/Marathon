@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Build with Maven & Run SpotBugs
-        run: cd marathon && mvn clean install -DskipTests com.github.spotbugs:spotbugs-maven-plugin:3.1.12:spotbugs
+        run: mvn clean install -DskipTests com.github.spotbugs:spotbugs-maven-plugin:3.1.12:spotbugs
 
       - name: Inspect SpotBugs Report
         uses: jwgmeligmeyling/spotbugs-github-action@master
